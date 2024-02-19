@@ -24,11 +24,11 @@ Just upload the files to Web Modeler, or open them in Desktop Modeler. You can o
 ### [Invoice Creator](./invoicing/)
 
 <section markdown="1" style="display: flex;">
+<div markdown="1" style="padding-right: 24px; min-width: 500px">
+<img src="./invoicing/create-invoice_8-5.png" width="500" style="border: 1px solid lightgray;">
+</div>
 <div markdown="1" style="max-width: 400px"> 
 Create and review an invoice with a dynamic list of items and automatic total and tax calculations in a WYSIWYG editor.
-</div>
-<div markdown="1" style="margin-left: auto; padding-left: 24px; min-width: 500px">
-<img src="./financial-transactions/create-invoice_8-5.png" width="500" style="border: 1px solid lightgray;">
 </div>
 </section>
 
@@ -46,11 +46,11 @@ Not every task can be worked on using a form. Many tasks require users to perfor
 ### [Credit Card Order](./orders/)
 
 <section markdown="1" style="display: flex;">
+<div markdown="1" style="padding-right: 24px; min-width: 500px" style="border: 1px solid lightgray;">
+<img src="./orders/credit-card-order_8-5.png" width="500" style="border: 1px solid lightgray;">
+</div>
 <div markdown="1" style="max-width: 400px"> 
 A simplified credit card order form, suitable to bootstrap a self-service account opening process.
-</div>
-<div markdown="1" style="margin-left: auto; padding-left: 24px; min-width: 500px" style="border: 1px solid lightgray;">
-<img src="./orders/credit-card-order_8-5.png" width="500" style="border: 1px solid lightgray;">
 </div>
 </section>
 
@@ -68,10 +68,10 @@ Review a car insurance claim with an overview of relevant details, including pic
 ### [OCR Validation](./data-validation/)
 
 <section markdown="1" style="display: flex;">
+<div markdown="1" style="padding-right: 24px; min-width: 500px" style="border: 1px solid lightgray;">
+<img src="./data-validation/ocr-scan-check_8-5.png" width="500" style="border: 1px solid lightgray;">
+</div>
 <div markdown="1" style="max-width: 400px"> 
 Let users validate and correct results from an OCR scan. Improve your OCR accuracy by measuring the number of corrected rows.
-</div>
-<div markdown="1" style="margin-left: auto; padding-left: 24px; min-width: 500px" style="border: 1px solid lightgray;">
-<img src="./data-validation/ocr-scan-check_8-5.png" width="500" style="border: 1px solid lightgray;">
 </div>
 </section>
