@@ -1,0 +1,33 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.3.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "2061c78"
+  },
+  "schemaVersion": 12,
+  "components": [
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_0fhsjyt",
+        "columns": null
+      },
+      "id": "Field_0068qwd",
+      "source": "https://www.credible.com/blog/wp-content/uploads/2019/07/how-to-pay-off-debt.png"
+    },
+    {
+      "text": "## Mortgage Application",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a7f7mj",
+        "columns": null
+      },
+      "id": "Field_091scgu"
+    }
+  ],
+  "type": "default",
+  "id": "loanInformation"
+}

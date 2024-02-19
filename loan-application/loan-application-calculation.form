@@ -1,0 +1,91 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.3.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "410a785"
+  },
+  "schemaVersion": 12,
+  "components": [
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_1cjghkq",
+        "columns": null
+      },
+      "id": "Field_0mugc5h",
+      "source": "https://www.credible.com/blog/wp-content/uploads/2019/07/how-to-pay-off-debt.png"
+    },
+    {
+      "text": "## Mortgage Application",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a7f7mj",
+        "columns": null
+      },
+      "id": "Field_091scgu"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1my3ro9",
+        "columns": null
+      },
+      "id": "Field_1j6v4pv",
+      "key": "name"
+    },
+    {
+      "label": "Loan Amount Requested",
+      "type": "number",
+      "layout": {
+        "row": "Row_19re6nh",
+        "columns": 9
+      },
+      "id": "Field_1dhhop9",
+      "key": "loanAmount",
+      "appearance": {
+        "suffixAdorner": "USD"
+      },
+      "decimalDigits": 2
+    },
+    {
+      "label": "Interest Rate",
+      "type": "number",
+      "layout": {
+        "row": "Row_19re6nh",
+        "columns": 7
+      },
+      "id": "Field_0t0xvu9",
+      "key": "interestRate",
+      "appearance": {
+        "suffixAdorner": "%"
+      }
+    },
+    {
+      "label": "Number of Years",
+      "type": "number",
+      "layout": {
+        "row": "Row_00psaxr",
+        "columns": null
+      },
+      "id": "Field_05eq8u2",
+      "key": "numYears",
+      "description": "Enter the number of years you want to pay back the loan."
+    },
+    {
+      "text": "------------------------------------------------------------\n#### Requested Loan Information:\n\n##### Loan Details:\n   - Loan Type: Personal Loan\n   - Loan Amount: $ {{loanAmount}}\n   - Loan Term: {{numYears*12}} months\n   - Interest Rate Type: Fixed at {{interestRate}}\n\n##### Monthly Payment: ${{ floor((loanAmount * ((interestRate / 100) / 12)) / (1 - (1 + ((interestRate / 100)/12))^(-numYears*12))) }}\n   - This is an estimated monthly payment which includes principal and interest based on the provided loan details.\n\n##### Additional Costs not reflected in monthly payment:\n   - Escrow for Insurance Costs\n   - Escrow for Property Taxes\n\n##### Early Repayment Information:\n   - Early Repayment Penalties: No penalties for early repayment\n\n------------------------------------------------------------\nPlease consult with your lender for detailed and customized loan terms.\n\nCamundanzia Inc.\n123 Main Street\nPhone: (555) 123-4567\nEmail: info@camundanzia.com\nWebsite: www.camundanzia.com\n",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1s52tja",
+        "columns": null
+      },
+      "id": "Field_1c2u4q4"
+    }
+  ],
+  "type": "default",
+  "id": "loanInformation"
+}

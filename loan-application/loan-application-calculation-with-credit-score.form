@@ -1,0 +1,164 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.3.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "2061c78"
+  },
+  "schemaVersion": 13,
+  "components": [
+    {
+      "text": "## Loan Application with Credit Score",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a7f7mj",
+        "columns": null
+      },
+      "id": "Field_091scgu"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1my3ro9",
+        "columns": null
+      },
+      "id": "Field_1j6v4pv",
+      "key": "name"
+    },
+    {
+      "label": "Loan Amount Requested",
+      "type": "number",
+      "layout": {
+        "row": "Row_19re6nh",
+        "columns": 9
+      },
+      "id": "Field_1dhhop9",
+      "key": "loanAmount",
+      "appearance": {
+        "suffixAdorner": "USD"
+      },
+      "decimalDigits": 2
+    },
+    {
+      "label": "Interest Rate",
+      "type": "number",
+      "layout": {
+        "row": "Row_19re6nh",
+        "columns": 7
+      },
+      "id": "Field_0t0xvu9",
+      "key": "interestRate",
+      "appearance": {
+        "suffixAdorner": "%"
+      },
+      "readonly": false
+    },
+    {
+      "label": "Number of Years",
+      "type": "number",
+      "layout": {
+        "row": "Row_00psaxr",
+        "columns": null
+      },
+      "id": "Field_1yib8cj",
+      "key": "numYears"
+    },
+    {
+      "label": "Credit Score",
+      "type": "number",
+      "layout": {
+        "row": "Row_1f3t46e",
+        "columns": 4
+      },
+      "id": "Field_0q988v6",
+      "key": "creditScore",
+      "validate": {
+        "min": 0,
+        "max": 847
+      },
+      "decimalDigits": 0,
+      "description": "300 - lowest, 800 - highest"
+    },
+    {
+      "components": [
+        {
+          "label": "Image view",
+          "type": "image",
+          "layout": {
+            "row": "Row_0ig3mgb",
+            "columns": null
+          },
+          "id": "Field_0xesc3s",
+          "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7UlEQVR4nO2bwWrCQBCG9/EqfQJLLk0mZje2oNDuhqDHnBqtgjEvYB+q9SBon6B462HLLkY8iNmD2rg7P/wQyB4y387sjgMSgkKhUGeQz8R9QPk3UCEv6YCKTUh5izRNARWbSwe/d8TXpGmCawW/M2maAAEIzADAEhC1EGgk5MdjXy69J7ltM231vPB7+p3VZ8BL51WuvK78bdOjXnmxXmMlABqJk8EfQjDJBNI0Qc0Hq7SvC77ywu/bB2BpsPuVv7yufQC2D8wYgFrrNIAfGwEsXS+Bhd9z+xCk+hqMza5Byu0DAPtGKHazEYIqEyjXKa7qXB2Myp+6Fe4b7fzNA4AzmTRNgAAEZgBgCYhaCCFLZDrIZJ5P5GxWaKvndJjpd1afAew5laPxVJZledTj96leYyWAkCUngz+EYJIJpGmCmg9WaV8XfGW11joA+WhiDECttQ5AUcyNAai1TgOY2Qggd70E0qHjh2DIEn3FmVyDndjCaxB2jdApCFY3QrCz2l3dCo8m+mBUflOt8CAz2vmbBwBnMmmaAAEIzADAEhC1EHAeMHb0GgxxHpC53Qrnrv8YKnAeMMd5QOlyCaQ4D0hwHsBwHiBwHgA4DxA4EAGcCAn7RmKB63+aCilvXQVCxNdBJ7n773hRKBSxQn+eAHi3zwaOMAAAAABJRU5ErkJggg==",
+          "alt": "redLight",
+          "conditional": {
+            "hide": "=creditScore >= 579"
+          }
+        },
+        {
+          "label": "Image view",
+          "type": "image",
+          "layout": {
+            "row": "Row_0ig3mgb",
+            "columns": null
+          },
+          "id": "Field_09g13mn",
+          "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7UlEQVR4nO1bsW7CMBD15xX1L5oLSSq6MMRRRFiidGmgIBEywVT+pmWoVDp0gzJVYuvs6qxQMSDsSkCDfU96UoRvyD3fnU/OwRiBQCAcATcBv3b88BN8Lk5Jx+cr1w8brG5wfL46tfO/9MIlqxvgXM5XZHUDkACcIgAoBbhSBDeIRNzJRJ4PxGhUSOJznGRyzegaENzFotcfirIs97L/OJQ2RgrgBtFB53dF0IkEVjeA4oUx7FXOb4m2xgmQ9wbaAqCtcQIUxVhbALS1WoCRiQLktqdAnFheBN0gkkeczjHYvDXwGISqETokgtGNEFTE3ZWtcG8gCyPyAVvhTqa18xcvAByJrG4AEoBTBAClAFeK4LUiMZ11xXyRivUmk8TnySyRa0bXgDaPxOtHKr6+7/cS19DGSAG81mHnd0XQiQRWN4DihTHsVc5vOX3qmifA/F29+1u+LFLzBFhv9JxHoq3VAqxMFGBuewpMZondRdD7wzHotwzsA8D2Rggq4u5iiGOeY2FEPr+l8jednb94AeBIZHUDkACcIgAoBbhSBJoP6Ft6Le7SfEBm96ex3PaPowXNB4xpPqC0OQVimg+IaD4goPkATvMBQPcBnC5EgG6EuHlXYo7tf5py/bBxFhG8cOk0o6v/9pdAIDAj8APGtMNtiaqipgAAAABJRU5ErkJggg==",
+          "alt": "yellowLight",
+          "conditional": {
+            "hide": "=creditScore >= 739 or creditScore < 580"
+          }
+        },
+        {
+          "label": "Image view",
+          "type": "image",
+          "layout": {
+            "row": "Row_0ig3mgb",
+            "columns": null
+          },
+          "id": "Field_0lt7p6g",
+          "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4ElEQVR4nO2bQW7CMBBFfbyi3qIZB6eouypOIxArV6AGChIh5TSlEjcom26h93BlJ1QsqsQLoGE8X/oSAi+Yl7E9fAnGSCQS6QS6i+RtIOJvEFKf04GQey7iDmubAiH35y7+1914x9omuFTxlVnbBARAUgcAbQHZCIFHiU77SmfZTC8WubV5nQ6U/Qz1GRA9pHoyneuiKP709HVu16AEwKOktvhjCC6dwNomaPjCpu2bij/YrEUHIJvMnAGYtegA5PnSGYBZ6zWABUYAme9bIB14fgjyKLFXnMs1GN4jvAahGoTqIKAehKCyebp2FJ7M7MFo/GJG4b5yevJXDwBOZNY2AQGQ1AFAW0A2QqA8YOrpNcgpD1B+j8KZ7z+GcsoDlpQHFD5vgZTygITygIjyAEl5AFAeICkQAUqEpMeRWC/RfDXU4VrpcDsqvVb2PfMZbgCPT5pvnnX4Nf7bG2XX4ATQS+qLP4bg0Ans6gKR1bC5+Mr8bYgQwIdyBmDOBHQAwq1j8cbbsd8A+OcIHwDu+xbgvh+C0EvsFed2DWKcA0Q5CNVCQD0IiUMnSNvi5Shcnvj8XZVt7/Dkrx+AOI1Z2wQEQFIHgM9bIPD9T1NcxJ2LQOjGuyBMbv67XhKJxFDoB5zLfge7tG8hAAAAAElFTkSuQmCC",
+          "alt": "greenLight",
+          "conditional": {
+            "hide": "=creditScore < 740"
+          }
+        }
+      ],
+      "showOutline": true,
+      "label": "",
+      "type": "group",
+      "layout": {
+        "row": "Row_1f3t46e",
+        "columns": null
+      },
+      "id": "Field_0ihnlve",
+      "conditional": {
+        "hide": "=creditScore = null"
+      }
+    },
+    {
+      "text": "##### Monthly Payment (USD)",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yi8n7v",
+        "columns": 4
+      },
+      "id": "Field_15piy2w"
+    },
+    {
+      "text": "`$` {{ (loanAmount * ((interestRate / 100) / 12)) / (1 - (1 + ((interestRate / 100)/12))^(-numYears*12)) }}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yi8n7v",
+        "columns": 4
+      },
+      "id": "Field_0w5th9j"
+    }
+  ],
+  "type": "default",
+  "id": "loanInformation"
+}
