@@ -1,0 +1,123 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "bd47015"
+  },
+  "schemaVersion": 15,
+  "id": "Form_AccountOpeningCardOrder",
+  "components": [
+    {
+      "text": "### Credit Card Order",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0g0tu7d",
+        "columns": null
+      },
+      "id": "Field_1o61smu"
+    },
+    {
+      "label": "Card holder name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1el2giq",
+        "columns": 8
+      },
+      "id": "Field_1t54fmt",
+      "key": "cardHolder"
+    },
+    {
+      "values": [
+        {
+          "label": "Default (Free)",
+          "value": "default"
+        },
+        {
+          "label": "Platinum ($14,99/Month)",
+          "value": "platinum"
+        }
+      ],
+      "label": "Card type",
+      "type": "select",
+      "layout": {
+        "row": "Row_1el2giq",
+        "columns": null
+      },
+      "id": "Field_0g1rpey",
+      "key": "cardType",
+      "defaultValue": "default"
+    },
+    {
+      "label": "Separator",
+      "type": "separator",
+      "layout": {
+        "row": "Row_1jkpqqx",
+        "columns": null
+      },
+      "id": "Field_19u89we"
+    },
+    {
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Debit Card</title>\n  <style>\n    .card {\n      width: 350px;\n      height: 210px;\n      padding: 20px;\n      color: #fff;\n      border-radius: 15px;\n      position: relative;\n      box-shadow: 0px 5px 10px rgba(0,0,0,0.24);\n      background: linear-gradient(321.03deg, #01adef 0%, #0860bf 91.45%);\n    }\n\n    .card.type-platinum {\n      background: linear-gradient(45deg, #828a94, #d9dde2);\n    }\n\n    .card.type-platinum:before {\n      content: '';\n      position: absolute;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background: linear-gradient(to bottom right, #ffffffbb 0%, transparent 50%, transparent 100%);\n      z-index: 1;\n      border-radius: 15px;\n    }\n\n    .card-header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      margin-bottom: 70px;\n      z-index: 2;\n    }\n\n    .card-logo {\n      width: 80px;\n      z-index: 2;\n    }\n\n    .card-number {\n      font-size: 16px;\n      font-family: monospace;\n      text-shadow: 1px 1px 1px #00000059;\n      letter-spacing: 2px;\n      word-spacing: 4px;\n      margin-bottom: 15px;\n      z-index: 2;\n    }\n\n    .card-info {\n      display: flex;\n      justify-content: space-between;\n      z-index: 2;\n      text-shadow: 1px 1px 1px #00000059;\n    }\n\n    .card-info div {\n      flex-grow: 1;\n    }\n\n    .card-info label {\n      display: block;\n      font-size: 12px;\n      opacity: 0.7;\n      margin-bottom: 5px;\n    }\n\n    .card-info span {\n      font-size: 14px;\n      font-weight: bold;\n    }\n  </style>\n</head>\n<body>\n\n<div class=\"card type-{{cardType}}\">\n  <div class=\"card-header\">\n    <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAfCAYAAAAslQkwAAAEtWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEyMCIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMxIgogICBleGlmOkNvbG9yU3BhY2U9IjEiCiAgIHRpZmY6SW1hZ2VXaWR0aD0iMTIwIgogICB0aWZmOkltYWdlTGVuZ3RoPSIzMSIKICAgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIKICAgdGlmZjpYUmVzb2x1dGlvbj0iOTYvMSIKICAgdGlmZjpZUmVzb2x1dGlvbj0iOTYvMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyNC0w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\" alt=\"Mastercard Logo\" class=\"card-logo\">\n  </div>\n  <div class=\"card-number\">**** **** **** 1234</div>\n  <div class=\"card-info\">\n    <div>\n      <label>Cardholder Name</label>\n      <span>{{if (cardHolder != \"\") then cardHolder else \"-\"}}</span>\n    </div>\n    <div>\n      <label>Expire Date</label>\n      <span>12/25</span>\n    </div>\n  </div>\n</div>\n\n</body>\n</html>\n",
+      "label": "HTML",
+      "type": "html",
+      "layout": {
+        "row": "Row_0lt906h",
+        "columns": null
+      },
+      "id": "Field_1y7d2x1"
+    },
+    {
+      "height": 20,
+      "label": "Spacer",
+      "type": "spacer",
+      "layout": {
+        "row": "Row_0lt906h",
+        "columns": 2
+      },
+      "id": "Field_0mjo4id"
+    },
+    {
+      "content": "<style>\n    .order-form {\n      max-width: 500px;\n      border: 1px solid lightgray;\n      padding: 20px;\n      text-align: left;\n    }\n\n    .section {\n      margin-bottom: 20px;\n    }\n\n    .section-title {\n      font-size: 18px;\n      font-weight: bold;\n      margin-bottom: 10px;\n      color: #323232;\n    }\n\n    .detail {\n      display: flex;\n      justify-content: space-between;\n      margin-bottom: 10px;\n    }\n\n    .detail-label {\n      opacity: 0.7;\n      color: #6c757d;\n    }\n\n    .terms {\n      font-size: 14px;\n      opacity: 0.9;\n      color: #6c757d;\n    }\n\n    .terms p {\n      padding-bottom: 4px;\n    }\n\n    button {\n      background-color: #28a745;\n      color: #fff;\n      padding: 10px 15px;\n      border: none;\n      border-radius: 5px;\n      cursor: pointer;\n      font-size: 16px;\n    }\n\n    button:hover {\n      background-color: #218838;\n    }\n  </style>\n\n<div class=\"order-form\">\n  <div class=\"section\">\n    <div class=\"section-title\">Credit Card Order Details</div>\n    <div class=\"detail\">\n      <span class=\"detail-label\">Initial Credit Limit:</span>\n      <span>$5,000.00</span>\n    </div>\n    <div class=\"detail\">\n      <span class=\"detail-label\">Shipment Fee:</span>\n      <span>$9.99</span>\n    </div>\n    <div class=\"detail\">\n      <span class=\"detail-label\">Monthly Fee:</span>\n      <span>${{if (cardType = \"platinum\") then \"14.99\" else \"0.00\"}}</span>\n    </div>\n  </div>\n</div>\n",
+      "label": "HTML",
+      "type": "html",
+      "layout": {
+        "row": "Row_0lt906h",
+        "columns": null
+      },
+      "id": "Field_0b5s71v"
+    },
+    {
+      "height": 20,
+      "label": "Spacer",
+      "type": "spacer",
+      "layout": {
+        "row": "Row_0upgi45",
+        "columns": null
+      },
+      "id": "Field_0a3mgmk"
+    },
+    {
+      "content": "<style>\n    .section {\n      margin-bottom: 20px;\n    }\n\n    .section-title {\n      font-size: 18px;\n      font-weight: bold;\n      margin-bottom: 10px;\n      color: #323232;\n    }\n\n    .detail {\n      display: flex;\n      justify-content: space-between;\n      margin-bottom: 10px;\n    }\n\n    .detail-label {\n      opacity: 0.7;\n      color: #6c757d;\n    }\n\n    .terms {\n      opacity: 0.9;\n      color: #6c757d;\n    }\n\n    .terms p {\n      padding-bottom: 4px;\n    }\n  </style>\n\n  <div class=\"section\">\n    <div class=\"section-title\">Terms and Conditions</div>\n    <div class=\"terms\">\n      <p>By placing this credit card order, you agree to the following terms and conditions:</p>\n      <p><strong>Interest Rate:</strong> 15% APR</p>\n      <p><strong>Insurance:</strong> Optional</p>\n      <p><strong>Repayment Period:</strong> Monthly</p>\n      <p><strong>Grace Period:</strong> 25 days</p>\n      <p><strong>Late Payment Fee:</strong> $20.00</p>\n      <p>CBank reserves the right to modify the terms at any time. Please review the full terms provided with your credit card application for details.</p>\n    </div>\n</div>\n",
+      "label": "HTML",
+      "type": "html",
+      "layout": {
+        "row": "Row_1c01lh6",
+        "columns": null
+      },
+      "id": "Field_1nznlwq"
+    },
+    {
+      "label": "I accept the terms and conditions for the credit card.",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1ndyhht",
+        "columns": null
+      },
+      "id": "Field_0f3ktyx",
+      "key": "cardTermsAccepted"
+    }
+  ],
+  "type": "default"
+}
