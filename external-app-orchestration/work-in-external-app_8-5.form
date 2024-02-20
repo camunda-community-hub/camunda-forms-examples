@@ -1,0 +1,100 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "bd47015"
+  },
+  "schemaVersion": 15,
+  "id": "Form_ExternalAppWork",
+  "components": [
+    {
+      "components": [
+        {
+          "content": "<style>\n.url-view {\n  padding: 10px 12px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.url-action {\n  color: white !important;\n  text-decoration: none;\n  padding: 10px 16px;\n  background: #0f62fe;\n  margin-top: 20px;\n  display: block;\n  max-width: 200px;\n  margin-left: 8px;\n  background-repeat: no-repeat;\n  background-position: right 16px center;\n  background-size: 16px;\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTI2LDI4SDZhMi4wMDI3LDIuMDAyNywwLDAsMS0yLTJWNkEyLjAwMjcsMi4wMDI3LDAsMCwxLDYsNEgxNlY2SDZWMjZIMjZWMTZoMlYyNkEyLjAwMjcsMi4wMDI3LDAsMCwxLDI2LDI4WiIgZmlsbD0id2hpdGUiLz4KICA8cG9seWdvbiBwb2ludHM9IjIwIDIgMjAgNCAyNi41ODYgNCAxOCAxMi41ODYgMTkuNDE0IDE0IDI4IDUuNDE0IDI4IDEyIDMwIDEyIDMwIDIgMjAgMiIgZmlsbD0id2hpdGUiLz4KICA8cmVjdCBpZD0iX1RyYW5zcGFyZW50X1JlY3RhbmdsZV8iIGRhdGEtbmFtZT0iJmx0O1RyYW5zcGFyZW50IFJlY3RhbmdsZSZndDsiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K\")\n}\n\n.url-action-panel {\n  display: flex;\n  flex-direction: column;\n}\n</style>\n\n<div class=\"url-action-panel\">\n  <div class=\"fjs-form-field-textfield\">\n    <div class=\"fjs-input-group\">\n      <div class=\"url-view fjs-input\">\n        <a target=\"_blank\" href=\"{{externalAppUrl}}\">{{externalAppUrl}}</a>\n      </div>\n    </div>\n  </div>\n\n  <a class=\"url-action\" target=\"_blank\" href=\"{{externalAppUrl}}\">\n    Open in new tab\n  </a>\n</div>",
+          "label": "HTML",
+          "type": "html",
+          "layout": {
+            "row": "Row_1el2lul",
+            "columns": null
+          },
+          "id": "Field_1i4yqzx"
+        },
+        {
+          "label": "Separator",
+          "type": "separator",
+          "layout": {
+            "row": "Row_0u2z464",
+            "columns": null
+          },
+          "id": "Field_05cxhrj"
+        },
+        {
+          "text": "##### Task Instructions\n\n{{taskInstructions}}",
+          "label": "Text view",
+          "type": "text",
+          "layout": {
+            "row": "Row_11lrvlf",
+            "columns": null
+          },
+          "id": "Field_1cidqe2"
+        }
+      ],
+      "showOutline": false,
+      "label": "",
+      "type": "group",
+      "layout": {
+        "row": "Row_0opsrmr",
+        "columns": null
+      },
+      "id": "Field_0fxvc63"
+    },
+    {
+      "components": [
+        {
+          "content": "<style>\n        .info-box {\n            background-color: #fff;\n            border: 1px solid #e0e0e0;\n            border-left: 8px solid #0f62fe;\n            border-radius: 0px;\n            padding: 20px;\n        }\n\n        .info-box ol {\n            padding: 0;\n        }\n\n        .info-box li {\n            padding: 2px;\n        }\n\n        .info-header {\n            font-size: 16px;\n            font-weight: bold;\n            color: #333;\n            margin-bottom: 10px;\n        }\n\n        .info-message {\n            font-size: 13px;\n            color: #333;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"info-box\">\n        <div class=\"info-header\">General instructions</div>\n        <div class=\"info-message\">\n           <div id=\"instructions\">\n        <ol>\n            <li>Open the external app in a new tab or window by clicking the action.</li>\n            <li>Perform the required tasks within the external app.</li>\n            <li>Once you have completed your work, return to this page.</li>\n            <li>Confirm your actions by ticking the respective checkbox clicking the \"Complete\" button.</li>\n        </ol>\n    </div>\n\n        </div>\n    </div>",
+          "label": "HTML",
+          "type": "html",
+          "layout": {
+            "row": "Row_12wfp3x",
+            "columns": null
+          },
+          "id": "Field_0w0jokv"
+        }
+      ],
+      "showOutline": false,
+      "label": "",
+      "type": "group",
+      "layout": {
+        "row": "Row_0opsrmr",
+        "columns": null
+      },
+      "id": "Field_0p8mxd7"
+    },
+    {
+      "label": "Additional comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0qledoy",
+        "columns": null
+      },
+      "id": "Field_1aemlxv",
+      "key": "additionalComments",
+      "description": "Provide additional information if anything if anything was unusual."
+    },
+    {
+      "label": "I completed my work",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0j5ni89",
+        "columns": null
+      },
+      "id": "Field_1jifavd",
+      "key": "workCompleted",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default"
+}
