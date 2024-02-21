@@ -1,0 +1,67 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "bf8f46a"
+  },
+  "schemaVersion": 15,
+  "id": "Form_FilterableTable",
+  "components": [
+    {
+      "text": "### Recent Orders\nUse the filters to find specific orders for review.",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hw95e5",
+        "columns": null
+      },
+      "id": "Field_192syqz"
+    },
+    {
+      "label": "Filter",
+      "type": "taglist",
+      "layout": {
+        "row": "Row_0his04j",
+        "columns": null
+      },
+      "id": "Field_13ex6er",
+      "key": "filters",
+      "valuesExpression": "=flatten(\n  for item in orders[items]\n    return split(item, \",\")\n)"
+    },
+    {
+      "label": "",
+      "type": "table",
+      "layout": {
+        "row": "Row_019whyp",
+        "columns": null
+      },
+      "rowCount": 10,
+      "columns": [
+        {
+          "label": "ID",
+          "key": "orderId"
+        },
+        {
+          "label": "Items",
+          "key": "items"
+        },
+        {
+          "label": "Date",
+          "key": "date"
+        },
+        {
+          "label": "Status",
+          "key": "status"
+        },
+        {
+          "label": "Total",
+          "key": "total"
+        }
+      ],
+      "id": "Field_1ibdvgj",
+      "dataSource": "=if (count(filters) = 0) \nthen orders\nelse\norders[orderId in distinct values(\n  flatten(\n    for filter in filters \n      return orders[contains(lower case(items), lower case(filter))][orderId]\n  )\n)]"
+    }
+  ],
+  "type": "default"
+}
