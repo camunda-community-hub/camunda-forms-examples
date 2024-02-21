@@ -1,0 +1,46 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "username": "user1",
+      "avatar": "https://placekitten.com/32/32",
+      "createdAt": "2024-02-21T08:00:00Z",
+      "body": "This is the main issue. What do you think about it?"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "avatar": "https://placekitten.com/32/33",
+      "createdAt": "2024-02-21T09:15:00Z",
+      "body": "I agree with you, user1. This is indeed an important issue that needs attention."
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "avatar": "https://placekitten.com/32/34",
+      "createdAt": "2024-02-21T10:30:00Z",
+      "body": "Has anyone started working on this? I'd like to contribute."
+    },
+    {
+      "id": 4,
+      "username": "user1",
+      "avatar": "https://placekitten.com/32/32",
+      "createdAt": "2024-02-21T11:45:00Z",
+      "body": "Thanks for the interest, user3! Feel free to jump in and contribute. We haven't started yet."
+    },
+    {
+      "id": 5,
+      "username": "user4",
+      "avatar": "https://placekitten.com/32/35",
+      "createdAt": "2024-02-21T13:00:00Z",
+      "body": "I've submitted a pull request addressing this issue. Take a look and let me know your thoughts."
+    },
+    {
+      "id": 6,
+      "username": "user1",
+      "avatar": "https://placekitten.com/32/32",
+      "createdAt": "2024-02-21T14:15:00Z",
+      "body": "Great work, user4! I'll review the pull request and provide feedback soon."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "bf8f46a"
+  },
+  "schemaVersion": 15,
+  "id": "Form_1410unm",
+  "components": [
+    {
+      "components": [
+        {
+          "content": "<style>\n  .comment {\n    border: 1px solid #e1e4e8;\n    border-radius: 6px;\n    padding: 16px;\n    background-color: #f6f8fa;\n    margin-bottom: -10px;\n  }\n\n  .comment-header {\n    display: flex;\n    align-items: center;\n    margin-bottom: 8px;\n  }\n\n  .comment-avatar {\n    width: 32px;\n    height: 32px;\n    border-radius: 50%;\n    margin-right: 8px;\n  }\n\n  .comment-username {\n    font-weight: bold;\n    margin-right: 8px;\n  }\n\n  .comment-date {\n    color: #586069;\n  }\n</style>\n\n<div class=\"comment\">\n  <div class=\"comment-header\">\n    <img\n      class=\"comment-avatar\"\n      src=\"{{this.avatar}}\"\n      alt=\"User Avatar\"\n    />\n    <span class=\"comment-username\">{{this.username}}</span>\n    <span class=\"comment-date\">commented on {{date(this.createdAt)}}</span>\n  </div>\n  <div class=\"comment-body\">\n    {{this.body}}\n  </div>\n</div>\n",
+          "label": "HTML",
+          "type": "html",
+          "layout": {
+            "row": "Row_177h2rp",
+            "columns": null
+          },
+          "id": "Field_1lt2q3h"
+        }
+      ],
+      "showOutline": false,
+      "isRepeating": true,
+      "allowAddRemove": false,
+      "defaultRepetitions": 1,
+      "label": "Comments",
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_1s4mcp9",
+        "columns": null
+      },
+      "id": "Field_1qgid65",
+      "path": "comments",
+      "nonCollapsedItems": 3,
+      "disableCollapse": true
+    },
+    {
+      "label": "New comment",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1lh3gyv",
+        "columns": null
+      },
+      "id": "Field_06k7046",
+      "key": "newComment"
+    }
+  ],
+  "type": "default"
+}
