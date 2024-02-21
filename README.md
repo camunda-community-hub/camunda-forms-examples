@@ -79,10 +79,21 @@ Let users validate and correct results from an OCR scan. Improve your OCR accura
 ### [Filterable Table](./filterable-table/)
 
 <section markdown="1" style="display: flex;">
-<div markdown="1" style="padding-right: 24px; min-width: 500px" style="border: 1px solid lightgray;">
-<img src="./filterable-table/filterable-table_8-5.png" width="500" style="border: 1px solid lightgray;">
+<div markdown="1" style="padding-right: 24px; min-width: 600px" style="border: 1px solid lightgray;">
+<img src="./filterable-table/filterable-table_8-5.png" width="600" style="border: 1px solid lightgray;">
 </div>
 <div markdown="1" style="max-width: 400px"> 
 Filter table values using a configurable tag list and other components.
+</div>
+</section>
+
+### [Comments](./comments/)
+
+<section markdown="1" style="display: flex;">
+<div markdown="1" style="padding-right: 24px; min-width: 500px" style="border: 1px solid lightgray;">
+<img src="./comments/comments_8-5.png" width="500" style="border: 1px solid lightgray;">
+</div>
+<div markdown="1" style="max-width: 400px"> 
+Show comments from a conversation or thread, and add new ones.
 </div>
 </section>
